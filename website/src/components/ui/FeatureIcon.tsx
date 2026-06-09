@@ -62,44 +62,126 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
   craft: (
     <>
       <defs>
-        <linearGradient id="fi-craft-steel" x1="10" y1="10" x2="38" y2="22">
-          <stop offset="0%" stopColor="#f2f4f6" />
-          <stop offset="100%" stopColor="#8f989d" />
+        <linearGradient id="fi-craft-timber-warm" x1="8" y1="10" x2="40" y2="40">
+          <stop offset="0%" stopColor="#e8c878" />
+          <stop offset="45%" stopColor="#c9a05c" />
+          <stop offset="100%" stopColor="#8b6340" />
         </linearGradient>
-        <linearGradient id="fi-craft-handle" x1="20" y1="22" x2="34" y2="42">
+        <linearGradient id="fi-craft-timber-cool" x1="40" y1="10" x2="8" y2="40">
+          <stop offset="0%" stopColor="#b8893f" />
+          <stop offset="50%" stopColor="#9a7035" />
+          <stop offset="100%" stopColor="#6b4a22" />
+        </linearGradient>
+        <linearGradient id="fi-craft-timber-deep" x1="24" y1="34" x2="24" y2="42">
+          <stop offset="0%" stopColor="#7a5520" />
+          <stop offset="100%" stopColor="#4a3018" />
+        </linearGradient>
+        <linearGradient id="fi-craft-peg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#f2c46e" />
+          <stop offset="100%" stopColor="#b87333" />
+        </linearGradient>
+        <linearGradient id="fi-craft-chisel-blade" x1="6" y1="34" x2="16" y2="42">
+          <stop offset="0%" stopColor="#f4f6f8" />
+          <stop offset="100%" stopColor="#9aa3a8" />
+        </linearGradient>
+        <linearGradient id="fi-craft-chisel-handle" x1="6" y1="36" x2="12" y2="42">
           <stop offset="0%" stopColor="#e8a55c" />
           <stop offset="100%" stopColor="#b87333" />
         </linearGradient>
-        <linearGradient id="fi-craft-plank" x1="8" y1="34" x2="40" y2="42">
-          <stop offset="0%" stopColor="#d4a85a" />
-          <stop offset="100%" stopColor="#7a5520" />
+        <linearGradient id="fi-craft-trim" x1="16" y1="30" x2="32" y2="38">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#f0ebe3" />
         </linearGradient>
       </defs>
-      <rect x="8" y="35" width="32" height="6.5" rx="1" fill="url(#fi-craft-plank)" />
+      <rect x="8.5" y="37.2" width="31" height="3.8" rx="0.6" fill="url(#fi-craft-timber-deep)" />
+      <rect x="10.2" y="20.2" width="6.2" height="17.2" rx="0.7" fill="url(#fi-craft-timber-warm)" />
+      <rect x="31.6" y="20.2" width="6.2" height="17.2" rx="0.7" fill="url(#fi-craft-timber-cool)" />
       <path
-        d="M12 37.2h24"
+        d="M10.2 20.2h6.2M31.6 20.2h6.2M12.1 23.5v12.5M14.5 22.8v13.5M33.9 23.5v12.5M36.3 22.8v13.5"
         stroke="#5c3d1e"
+        strokeWidth="0.35"
+        strokeLinecap="round"
+        opacity="0.22"
+      />
+      <rect x="11.2" y="27.1" width="25.6" height="4.8" rx="0.6" fill="url(#fi-craft-timber-warm)" />
+      <path
+        d="M13.2 29.5h21.6"
+        stroke="#5c3d1e"
+        strokeWidth="0.35"
+        strokeLinecap="round"
+        opacity="0.18"
+      />
+      <path
+        d="M10.2 20.8 22.8 8.8 27.2 8.8 14.6 20.8Z"
+        fill="url(#fi-craft-timber-warm)"
+      />
+      <path
+        d="M37.8 20.8 25.2 8.8 20.8 8.8 33.4 20.8Z"
+        fill="url(#fi-craft-timber-cool)"
+      />
+      <path d="M21.8 8.8 24 6.2 26.2 8.8 24 11Z" fill="#5c3d1e" />
+      <rect
+        x="16.4"
+        y="31.2"
+        width="15.2"
+        height="5.8"
+        rx="0.5"
+        fill="url(#fi-craft-trim)"
+        stroke="#2c4a3e"
+        strokeWidth="0.35"
+        opacity="0.95"
+      />
+      <path
+        d="M16.4 33.4h15.2M16.4 35.6h15.2"
+        stroke="#2c4a3e"
         strokeWidth="0.45"
         strokeLinecap="round"
-        opacity="0.3"
+        opacity="0.16"
       />
       <path
-        d="M10 12.5h24a2 2 0 0 1 2 2v5.5a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-5.5a2 2 0 0 1 2-2Z"
-        fill="url(#fi-craft-steel)"
+        d="M16.4 31.2h2.1v1.4c0 0.5 0.4 0.9 0.9 0.9h9.2c0.5 0 0.9-0.4 0.9-0.9v-1.4"
+        fill="none"
+        stroke="#b87333"
+        strokeWidth="0.55"
+        strokeLinecap="round"
+        opacity="0.55"
       />
       <path
-        d="M8 16.5 5.5 20.5 8.5 21.5 11 17.5 8 16.5Z"
-        fill="#6f787d"
+        d="M10.2 20.2h6.2v17.2h-6.2zM31.6 20.2h6.2v17.2h-6.2zM11.2 27.1h25.6v4.8h-25.6zM10.2 20.8 22.8 8.8 27.2 8.8 14.6 20.8zM37.8 20.8 25.2 8.8 20.8 8.8 33.4 20.8z"
+        fill="none"
+        stroke="#5c3d1e"
+        strokeWidth="0.45"
+        strokeLinejoin="round"
+        opacity="0.55"
+      />
+      <circle cx="13.3" cy="20.9" r="1.45" fill="url(#fi-craft-peg)" stroke="#8b5a24" strokeWidth="0.35" />
+      <circle cx="34.7" cy="20.9" r="1.45" fill="url(#fi-craft-peg)" stroke="#8b5a24" strokeWidth="0.35" />
+      <circle cx="24" cy="9.1" r="1.45" fill="url(#fi-craft-peg)" stroke="#8b5a24" strokeWidth="0.35" />
+      <circle cx="13.3" cy="28.5" r="1.25" fill="url(#fi-craft-peg)" stroke="#8b5a24" strokeWidth="0.35" />
+      <circle cx="34.7" cy="28.5" r="1.25" fill="url(#fi-craft-peg)" stroke="#8b5a24" strokeWidth="0.35" />
+      <circle cx="13.3" cy="20.9" r="0.45" fill="#f7e2b8" opacity="0.7" />
+      <circle cx="34.7" cy="20.9" r="0.45" fill="#f7e2b8" opacity="0.7" />
+      <circle cx="24" cy="9.1" r="0.45" fill="#f7e2b8" opacity="0.7" />
+      <path
+        d="M6.5 38.2 14.8 30.2 16.2 31.6 7.9 39.6 6.5 38.2Z"
+        fill="url(#fi-craft-chisel-blade)"
+        stroke="#7a848a"
+        strokeWidth="0.35"
+        strokeLinejoin="round"
       />
       <path
-        d="M34 16.5 36.5 20.5 33.5 21.5 31 17.5 34 16.5Z"
-        fill="#6f787d"
+        d="M5.2 39.2 7.4 37 8.8 38.4 6.6 40.6 5.2 39.2Z"
+        fill="url(#fi-craft-chisel-handle)"
+        stroke="#8b5a24"
+        strokeWidth="0.35"
+        strokeLinejoin="round"
       />
       <path
-        d="M21.5 21.5c0-1.2 1-2.2 2.2-2.2h1.6c1.2 0 2.2 1 2.2 2.2v16.8c0 1.2-1 2.2-2.2 2.2h-1.6c-1.2 0-2.2-1-2.2-2.2V21.5Z"
-        fill="url(#fi-craft-handle)"
+        d="M14.8 30.2 15.8 29.2"
+        stroke="#7a848a"
+        strokeWidth="0.9"
+        strokeLinecap="round"
       />
-      <ellipse cx="24" cy="22.5" rx="3.2" ry="1.2" fill="#8b5a24" opacity="0.35" />
     </>
   ),
   local: (
