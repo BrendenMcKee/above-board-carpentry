@@ -23,7 +23,7 @@ export default function PortfolioPage() {
   return (
     <>
       <Hero
-        image="/images/hero/Sanders-shell.jpg"
+        image="/images/portfolio/PH6-small.jpg"
         eyebrow="Portfolio"
         title="Projects we're proud of"
         subtitle="Well-built homes that provide exceptional comfort, health, and energy savings, from Passive Houses to cottage renovations and precision framing."
