@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }: Props) {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest/50 to-transparent" />
+        <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-12 pt-32 md:px-8 md:pb-16">
           <Link
             href="/portfolio"
@@ -50,7 +50,7 @@ export default async function ProjectPage({ params }: Props) {
           >
             ← Back to Portfolio
           </Link>
-          <h1 className="font-display text-4xl font-semibold text-white md:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-6xl">
             {project.name}
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">{project.summary}</p>
