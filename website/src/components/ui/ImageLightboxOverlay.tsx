@@ -31,12 +31,18 @@ function getUpscaledDimensions(naturalWidth: number, naturalHeight: number): Dis
   let scale = 1;
   if (naturalWidth < minWidth) scale = Math.max(scale, minWidth / naturalWidth);
   if (naturalHeight < minHeight) scale = Math.max(scale, minHeight / naturalHeight);
+  scale = Math.min(scale, 3);
 
-  scale = Math.min(scale, maxWidth / naturalWidth, maxHeight / naturalHeight, 3);
+  let width = naturalWidth * Math.max(1, scale);
+  let height = naturalHeight * Math.max(1, scale);
+
+  const clamp = Math.min(maxWidth / width, maxHeight / height, 1);
+  width *= clamp;
+  height *= clamp;
 
   return {
-    width: Math.round(naturalWidth * Math.max(1, scale)),
-    height: Math.round(naturalHeight * Math.max(1, scale)),
+    width: Math.max(1, Math.round(width)),
+    height: Math.max(1, Math.round(height)),
   };
 }
 
@@ -156,21 +162,26 @@ function LightboxImagePanel({
       )}
 
       {imageLoaded && displaySize && (
-        <div className="inline-block max-w-full overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/15">
-          <Image
+        <div
+          className="inline-block overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/15 leading-[0]"
+          style={{
+            width: displaySize.width,
+            height: displaySize.height,
+          }}
+        >
+          {/* Native img keeps the frame pixel-aligned with the rendered image. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={image.src}
             alt={image.alt}
             width={displaySize.width}
             height={displaySize.height}
-            className="block object-contain"
+            draggable={false}
+            className="block"
             style={{
               width: displaySize.width,
               height: displaySize.height,
-              maxWidth: "min(calc(100vw - 5rem), 1200px)",
-              maxHeight: "78vh",
             }}
-            sizes="100vw"
-            priority
           />
         </div>
       )}
