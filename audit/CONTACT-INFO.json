@@ -1,0 +1,126 @@
+{
+  "business": {
+    "name": "Above Board Carpentry",
+    "tagline": "Integrity | Ingenuity",
+    "founded": 2017,
+    "owner": "Graham Borgdorff"
+  },
+  "address": {
+    "street": "1724 Tom Bolton Road",
+    "city": "Minden",
+    "province": "Ontario",
+    "postalCode": "K0M 2K0",
+    "country": "Canada",
+    "region": "Haliburton Highlands"
+  },
+  "contact": {
+    "phone": "(705) 455-2196",
+    "phoneTel": "+17054552196",
+    "email": "info@aboveboardcarpentry.com",
+    "hours": "Monday–Friday: 8:00 AM–5:00 PM"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/aboveboardcarpentry/"
+  },
+  "website": {
+    "current": "https://aboveboardcarpentry.com/",
+    "platform": "WordPress 5.8.13",
+    "theme": "Twenty Seventeen"
+  },
+  "certifications": [
+    {
+      "name": "Red Seal General Carpenter",
+      "url": "http://www.red-seal.ca/about/pr.4gr.1m-eng.html",
+      "image": "REDSEAL-sq.png"
+    },
+    {
+      "name": "RenoMark Certified",
+      "url": "https://renomark.ca/",
+      "image": "RenoMark-R-png.png"
+    },
+    {
+      "name": "Passive House Tradesperson",
+      "url": "https://cms.passivehouse.com/en/training/data/tradespersons/detail/h6317/",
+      "image": "Passive-Certification-Icon.png"
+    },
+    {
+      "name": "Net Zero Trained Builder",
+      "url": "https://www.chba.ca/CHBA/BuyingNew/Net-Zero-Homes.aspx",
+      "image": "logo_netzerohome_colour-no-tag-web-RGB.png"
+    }
+  ],
+  "memberships": [
+    {
+      "name": "Ontario Home Builders' Association",
+      "url": "https://www.ohba.ca/",
+      "image": "ohba-logo.png"
+    },
+    {
+      "name": "Passive Buildings Canada",
+      "url": "https://www.passivebuildings.ca/",
+      "image": "Passive-buildings-canada.png"
+    }
+  ],
+  "team": [
+    {
+      "name": "Graham Borgdorff",
+      "role": "Owner",
+      "since": 2017,
+      "photo": "GB-small-1.jpg"
+    },
+    {
+      "name": "Liam Stringer",
+      "role": "General Labourer",
+      "since": 2017,
+      "photo": "ACE4075-scaled.jpg"
+    },
+    {
+      "name": "Aaron Alfano",
+      "role": "General Labourer",
+      "since": 2018,
+      "photo": "AA-better-small.jpg"
+    },
+    {
+      "name": "Sarah Langemann",
+      "role": "Administrative Assistant",
+      "since": 2019,
+      "photo": "SL-small.jpg"
+    }
+  ],
+  "portfolioProjects": [
+    {
+      "name": "Kash: a Passive House",
+      "slug": "kash-passive-house",
+      "type": "residential",
+      "url": "/2021/06/17/kash-passive-house/",
+      "heroImage": "PH6-small.jpg",
+      "featured": true
+    },
+    {
+      "name": "Bob: a cottage renovation",
+      "slug": "bob-cottage-a-significant-renovation",
+      "type": "residential",
+      "url": "/2021/06/17/bob-cottage-a-significant-renovation/",
+      "heroImage": "IMG_5517.jpg"
+    },
+    {
+      "name": "Drag: a house",
+      "slug": "drag-a-cottage-shell",
+      "type": "residential",
+      "url": "/2021/06/17/drag-a-cottage-shell/",
+      "heroImage": "IMG_0288.jpg"
+    },
+    {
+      "name": "Kash: a garage",
+      "slug": "kash-a-garage",
+      "type": "garage",
+      "url": "/2021/06/27/kash-a-garage/"
+    },
+    {
+      "name": "Selarno: a garage framing",
+      "slug": "selarno-a-garage-framing",
+      "type": "garage",
+      "url": "/2021/06/27/selarno-a-garage-framing/"
+    }
+  ]
+}
