@@ -54,8 +54,8 @@ export const portfolioProjects: PortfolioProject[] = [
     gallery: [
       "IMG_5517-scaled.jpg",
       "IMG_5436-scaled.jpg",
-      "IMG_5438-scaled.jpg",
-      "IMG_5440-scaled.jpg",
+      "IMG_5489-scaled.jpg",
+      "IMG_5502-scaled.jpg",
     ].map(img),
   },
   {
@@ -71,9 +71,9 @@ export const portfolioProjects: PortfolioProject[] = [
     gallery: [
       "IMG_0288-scaled.jpg",
       "IMG_0337-scaled.jpg",
-      "IMG_0338-scaled.jpg",
-      "IMG_0339-scaled.jpg",
-      "IMG_0340-scaled.jpg",
+      "IMG_9930-scaled.jpg",
+      "IMG_0350-scaled.jpg",
+      "IMG_9931-scaled.jpg",
     ].map(img),
   },
   {
@@ -102,7 +102,7 @@ export const portfolioProjects: PortfolioProject[] = [
     gallery: [
       "IMG_6209-1-scaled.jpg",
       "IMG_6210-scaled.jpg",
-      "IMG_6211-scaled.jpg",
+      "IMG_6208-scaled.jpg",
     ].map(img),
   },
 ];
