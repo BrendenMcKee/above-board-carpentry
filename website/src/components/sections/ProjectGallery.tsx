@@ -10,26 +10,58 @@ interface ProjectGalleryProps {
   projectName: string;
 }
 
+interface DisplaySize {
+  width: number;
+  height: number;
+}
+
+function getUpscaledDimensions(naturalWidth: number, naturalHeight: number): DisplaySize {
+  const maxWidth = Math.min(window.innerWidth * 0.9 - 80, 1200);
+  const maxHeight = window.innerHeight * 0.78;
+  const minWidth = Math.min(maxWidth, Math.max(480, window.innerWidth * 0.58));
+  const minHeight = Math.min(maxHeight, window.innerHeight * 0.5);
+
+  let scale = 1;
+  if (naturalWidth < minWidth) scale = Math.max(scale, minWidth / naturalWidth);
+  if (naturalHeight < minHeight) scale = Math.max(scale, minHeight / naturalHeight);
+
+  scale = Math.min(scale, maxWidth / naturalWidth, maxHeight / naturalHeight, 3);
+
+  return {
+    width: Math.round(naturalWidth * Math.max(1, scale)),
+    height: Math.round(naturalHeight * Math.max(1, scale)),
+  };
+}
+
 export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [displaySize, setDisplaySize] = useState<DisplaySize | null>(null);
 
   const close = useCallback(() => setActiveIndex(null), []);
 
-  const openAt = useCallback((index: number) => {
+  const resetImageState = useCallback(() => {
     setImageLoaded(false);
-    setActiveIndex(index);
+    setDisplaySize(null);
   }, []);
+
+  const openAt = useCallback(
+    (index: number) => {
+      resetImageState();
+      setActiveIndex(index);
+    },
+    [resetImageState],
+  );
 
   const goTo = useCallback(
     (direction: -1 | 1) => {
-      setImageLoaded(false);
+      resetImageState();
       setActiveIndex((current) => {
         if (current === null) return null;
         return (current + direction + images.length) % images.length;
       });
     },
-    [images.length],
+    [images.length, resetImageState],
   );
 
   const activeSrc = activeIndex !== null ? images[activeIndex] : null;
@@ -51,6 +83,12 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [activeIndex, close, goTo]);
+
+  const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = event.currentTarget;
+    setDisplaySize(getUpscaledDimensions(img.naturalWidth, img.naturalHeight));
+    setImageLoaded(true);
+  };
 
   return (
     <>
@@ -127,30 +165,47 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
             )}
 
             <div className="relative z-10 flex max-h-[85vh] max-w-[calc(100vw-5rem)] flex-col items-center md:max-w-[calc(100vw-8rem)]">
-              <div className="inline-block max-w-full overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/15">
-                {!imageLoaded && (
-                  <div
-                    className="flex items-center justify-center bg-white/5 px-10 py-14"
-                    aria-live="polite"
-                    aria-busy="true"
-                  >
-                    <GalleryLoader />
-                  </div>
-                )}
+              {!imageLoaded && (
+                <div aria-live="polite" aria-busy="true">
+                  <GalleryLoader />
+                </div>
+              )}
+
+              {imageLoaded && displaySize && (
+                <div className="inline-block max-w-full overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/15">
+                  <Image
+                    src={activeSrc}
+                    alt={`${projectName} photo ${activeIndex + 1}`}
+                    width={displaySize.width}
+                    height={displaySize.height}
+                    className="block object-contain"
+                    style={{
+                      width: displaySize.width,
+                      height: displaySize.height,
+                      maxWidth: "min(calc(100vw - 5rem), 1200px)",
+                      maxHeight: "78vh",
+                    }}
+                    sizes="100vw"
+                    priority
+                  />
+                </div>
+              )}
+
+              {!imageLoaded && (
                 <Image
                   key={activeSrc}
                   src={activeSrc}
-                  alt={`${projectName} photo ${activeIndex + 1}`}
+                  alt=""
                   width={1600}
                   height={1200}
-                  onLoad={() => setImageLoaded(true)}
-                  className={`block max-h-[78vh] w-auto max-w-[calc(100vw-5rem)] md:max-w-[calc(100vw-8rem)] ${
-                    imageLoaded ? "opacity-100" : "hidden"
-                  }`}
+                  onLoad={handleImageLoad}
+                  className="pointer-events-none absolute h-0 w-0 opacity-0"
                   sizes="100vw"
                   priority
+                  aria-hidden="true"
                 />
-              </div>
+              )}
+
               <p className="mt-4 text-sm font-medium text-white/80">
                 {activeIndex + 1} of {images.length}
               </p>
@@ -165,7 +220,7 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
 function GalleryLoader() {
   return (
     <div
-      className="h-9 w-9 animate-spin rounded-full border-2 border-white/20 border-t-white/75"
+      className="h-9 w-9 animate-spin rounded-full border-2 border-transparent border-t-white/80"
       role="status"
       aria-label="Loading image"
     />
