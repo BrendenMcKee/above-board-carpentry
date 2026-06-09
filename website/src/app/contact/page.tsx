@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <Hero
-        image="/images/portfolio/PH7-small.jpg"
+        image="/images/hero/contact-hero.jpg"
         eyebrow="Contact"
         title="Let's start a conversation"
         subtitle="We are excited to talk with you about your project, see your location, or hear what you're interested in from The ABC Store."
