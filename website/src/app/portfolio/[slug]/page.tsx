@@ -1,5 +1,6 @@
 import { CTABand } from "@/components/sections/CTABand";
 import { ProjectGallery } from "@/components/sections/ProjectGallery";
+import { ProjectNav } from "@/components/sections/ProjectNav";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { getProject, portfolioProjects } from "@/lib/portfolio";
@@ -67,6 +68,8 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </section>
 
+      <ProjectNav currentSlug={project.slug} />
+
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-5 md:px-8">
           <FadeIn>
@@ -87,7 +90,7 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-white pb-20 md:pb-28">
+      <section className="border-t border-forest/8 bg-white pt-16 pb-20 md:pt-24 md:pb-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <FadeIn>
             <h2 className="font-display mb-8 text-2xl font-semibold text-charcoal md:text-3xl">

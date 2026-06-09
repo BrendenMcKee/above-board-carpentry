@@ -223,3 +223,14 @@ export function getProjectsByType(type?: ProjectType) {
   if (!type) return portfolioProjects;
   return portfolioProjects.filter((p) => p.type === type);
 }
+
+export function getAdjacentProjects(slug: string) {
+  const index = portfolioProjects.findIndex((p) => p.slug === slug);
+  if (index === -1) return null;
+
+  const total = portfolioProjects.length;
+  return {
+    prev: portfolioProjects[(index - 1 + total) % total],
+    next: portfolioProjects[(index + 1) % total],
+  };
+}
