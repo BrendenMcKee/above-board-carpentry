@@ -11,15 +11,15 @@ const legalLinks = [
 export function Footer() {
   return (
     <footer className="bg-forest-dark text-white">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+      <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:items-start lg:gap-x-12 lg:gap-y-8">
+          <div className="sm:col-span-2 lg:col-span-5">
             <p className="font-display text-2xl font-semibold">{site.name}</p>
-            <p className="mt-2 text-sm text-white/60">{site.tagline}</p>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
+            <p className="mt-1 text-sm text-white/60">{site.tagline}</p>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-white/70">
               {site.description}
             </p>
-            <div className="mt-6 flex gap-4">
+            <div className="mt-5 flex flex-wrap gap-3">
               <a
                 href={site.social.facebook}
                 target="_blank"
@@ -37,11 +37,11 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-copper">
+          <div className="lg:col-span-3">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-copper">
               Navigate
             </p>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -55,12 +55,12 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-copper">
+          <div className="lg:col-span-4">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-copper">
               Contact
             </p>
-            <address className="not-italic space-y-2 text-sm text-white/70">
-              <p>{site.address.full}</p>
+            <address className="not-italic grid gap-x-8 gap-y-2 text-sm text-white/70 sm:grid-cols-2">
+              <p className="sm:col-span-2">{site.address.full}</p>
               <p>
                 <a
                   href={`tel:${site.contact.phoneTel}`}
@@ -77,16 +77,16 @@ export function Footer() {
                   {site.contact.email}
                 </a>
               </p>
-              <p>{site.contact.hours}</p>
+              <p className="sm:col-span-2">{site.contact.hours}</p>
             </address>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
             {legalLinks.map((link) => (
               <Link
                 key={link.href}

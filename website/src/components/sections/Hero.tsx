@@ -52,8 +52,7 @@ export function Hero({
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest/60 to-forest/20" />
-      <div className="grain-overlay absolute inset-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
 
       <motion.div
         style={{ y: contentY, opacity }}
@@ -73,7 +72,7 @@ export function Hero({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display max-w-4xl text-4xl font-semibold leading-[1.1] text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl"
+          className="font-display max-w-4xl text-4xl font-semibold leading-[1.1] text-white text-balance drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl"
         >
           {title}
         </motion.h1>

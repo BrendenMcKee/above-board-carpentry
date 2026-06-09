@@ -87,8 +87,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Garage construction project showcasing structural framing expertise and the same attention to detail that goes into every Above Board Carpentry build.",
     gallery: [
       "20190614_153252-5-scaled.jpg",
-      "20190614_153253-scaled.jpg",
-      "Collins-crop-small.jpg",
+      "20190614_152214-scaled.jpg",
     ].map(img),
   },
   {
