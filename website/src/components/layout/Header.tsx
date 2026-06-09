@@ -25,7 +25,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <Link href="/" className="group flex items-center gap-3" aria-label={site.name}>
-          <div className="shrink-0 rounded-lg bg-white px-3 py-2 shadow-md ring-1 ring-black/5 transition-transform group-hover:scale-105 md:px-4 md:py-2.5">
+          <div className="shrink-0 rounded-lg bg-white py-2 pl-3 pr-4 shadow-md ring-1 ring-black/5 transition-transform group-hover:scale-105 md:py-2.5 md:pl-4 md:pr-5">
             <Image
               src="/images/logo.png"
               alt=""
