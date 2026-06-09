@@ -19,7 +19,7 @@ export default function HomePage() {
         image="/images/hero/Tragert-small.jpg"
         eyebrow="Haliburton Highlands · Est. 2017"
         title="High-Performance Homes Built to Last"
-        subtitle="Red Seal certified. Passive House trained. Stunning homes with exceptionally low operating costs — crafted with integrity and ingenuity."
+        subtitle="Red Seal certified. Passive House trained. Stunning homes with exceptionally low operating costs, crafted with integrity and ingenuity."
       />
 
       <CredentialBar />
@@ -29,7 +29,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Why Above Board"
             title="Craftsmanship meets building science"
-            description="We don't just build homes — we engineer comfort, health, and energy performance into every project."
+            description="We don't just build homes. We engineer comfort, health, and energy performance into every project."
             align="center"
           />
           <div className="grid gap-6 md:grid-cols-3">
@@ -41,7 +41,7 @@ export default function HomePage() {
               },
               {
                 title: "Craft",
-                desc: "From hand-cut timber framing to fine interior finishing — every detail reflects our commitment to quality.",
+                desc: "From hand-cut timber framing to fine interior finishing, every detail reflects our commitment to quality.",
                 icon: "🪵",
               },
               {
@@ -123,7 +123,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Our Approach"
                 title="Well-built homes for exceptional living"
-                description="Above Board Carpentry focuses on homes that provide clients with exceptional comfort, health, and energy savings — built with the best products and systems available."
+                description="Above Board Carpentry focuses on homes that provide clients with exceptional comfort, health, and energy savings. We build with the best products and systems available."
               />
               <p className="mt-4 leading-relaxed text-muted">
                 Established in 2017 by Graham Borgdorff, a local tradesman with over 20 years of experience,
@@ -187,7 +187,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="The Team"
                 title={`Meet the people behind ${site.name}`}
-                description="A skilled, dedicated team led by Graham Borgdorff — committed to building science and fine carpentry."
+                description="A skilled, dedicated team led by Graham Borgdorff, committed to building science and fine carpentry."
               />
               <Button href="/about/team" variant="ghost" className="mt-6">
                 Meet the Team

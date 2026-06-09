@@ -18,7 +18,7 @@ export const site = {
     phone: "(705) 455-2196",
     phoneTel: "+17054552196",
     email: "info@aboveboardcarpentry.com",
-    hours: "Monday–Friday, 8:00 AM–5:00 PM",
+    hours: "Monday to Friday, 8:00 AM to 5:00 PM",
     responseTime: "We respond within one business day.",
   },
   social: {
@@ -130,7 +130,7 @@ export const services = [
   {
     title: "Timber Framing",
     description:
-      "Traditional hand-cut custom timber framing — including work at the Haliburton Welcome Centre.",
+      "Traditional hand-cut custom timber framing, including work at the Haliburton Welcome Centre.",
     icon: "timber",
   },
   {

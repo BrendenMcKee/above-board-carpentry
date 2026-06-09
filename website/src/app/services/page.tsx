@@ -18,7 +18,7 @@ export default function ServicesPage() {
         image="/images/hero/Sanders-shell.jpg"
         eyebrow="Services"
         title="From foundation to finish"
-        subtitle="Experts in all aspects of a project — from groundwork and foundation through to interior finishing and project management."
+        subtitle="Experts in all aspects of a project, from groundwork and foundation through to interior finishing and project management."
         tall={false}
         primaryCta={{ label: "Get a Quote", href: "/contact" }}
         secondaryCta={{ label: "See Our Work", href: "/portfolio" }}
@@ -61,7 +61,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted">
               We have an abundance of experience in project management and would be happy to work
-              with you through all the stages of a project — from initial planning to the final
+              with you through all the stages of a project, from initial planning to the final
               finishing touches.
             </p>
           </FadeIn>

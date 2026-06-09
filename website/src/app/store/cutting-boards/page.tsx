@@ -45,7 +45,7 @@ export default function CuttingBoardsPage() {
               <p>
                 Our cutting boards have been treated with an all-natural cutting board oil to
                 preserve and protect them. We chose Clark&apos;s Cutting Board Oil because it has
-                anti-microbial properties — the lemon has an excellent disinfectant quality and it
+                anti-microbial properties. The lemon has an excellent disinfectant quality and it
                 smells great. This product exceeds FDA regulation on food safety.
               </p>
               <p>

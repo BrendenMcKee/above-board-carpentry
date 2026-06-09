@@ -51,7 +51,7 @@ export default function CareProductsPage() {
                 >
                   Clark&apos;s Cutting Board Oil
                 </a>{" "}
-                — an all-natural product with anti-microbial properties that exceeds FDA food safety
+                , an all-natural product with anti-microbial properties that exceeds FDA food safety
                 regulations.
               </p>
               <p>See what products are ideal for your cutting board and inquire to purchase.</p>

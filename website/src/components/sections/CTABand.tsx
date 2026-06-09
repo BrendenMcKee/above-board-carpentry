@@ -18,7 +18,7 @@ export function CTABand() {
             Let&apos;s talk about your next project
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-white/70">
-            {site.contact.responseTime} Call us directly or send an inquiry — we&apos;d love to hear about your vision.
+            {site.contact.responseTime} Call us directly or send an inquiry. We&apos;d love to hear about your vision.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Button href="/contact" variant="primary">

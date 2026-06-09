@@ -1,4 +1,4 @@
-# Deployment Guide — Above Board Carpentry
+# Deployment Guide for Above Board Carpentry
 
 ## Local development
 
@@ -53,7 +53,7 @@ For Vercel dashboard deploy previews on pull requests, connect the repo in Verce
 
 ## Deploy to Vercel
 
-### Option A — Vercel Dashboard (recommended)
+### Option A: Vercel Dashboard (recommended)
 
 1. Go to [vercel.com/new](https://vercel.com/new)
 2. Import the Git repository (or upload the `website` folder)
@@ -64,7 +64,7 @@ For Vercel dashboard deploy previews on pull requests, connect the repo in Verce
    - `CONTACT_TO_EMAIL` = `info@aboveboardcarpentry.com`
 5. Deploy
 
-### Option B — Vercel CLI
+### Option B: Vercel CLI
 
 ```bash
 cd website

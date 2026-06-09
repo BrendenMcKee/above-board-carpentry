@@ -18,7 +18,7 @@ const products = [
     title: "Live Edge Hardwood Cutting Boards",
     href: "/store/cutting-boards",
     description:
-      "Hand-cut live edge boards made from maple and ash — cross cuts from logs right here in the Haliburton Highlands.",
+      "Hand-cut live edge boards made from maple and ash. Each board is a cross cut from logs right here in the Haliburton Highlands.",
     image: "/images/portfolio/IMG_8137crop-scaled.jpg",
   },
   {
@@ -37,7 +37,7 @@ export default function StorePage() {
         image="/images/portfolio/IMG_8137crop-scaled.jpg"
         eyebrow="The ABC Store"
         title="Crafted from Haliburton wood"
-        subtitle="Our latest division alongside Above Board Carpentry — live-edge hardwood cutting boards that bring out our creative side."
+        subtitle="Our latest division alongside Above Board Carpentry. Live-edge hardwood cutting boards that bring out our creative side."
         tall={false}
         primaryCta={{ label: "Inquire to Purchase", href: "/contact" }}
         secondaryCta={{ label: "Our Builds", href: "/portfolio" }}
@@ -48,7 +48,7 @@ export default function StorePage() {
           <SectionHeading
             eyebrow="Handcrafted"
             title="Wood with rustic charm"
-            description="We are still building high-performance, energy-efficient homes — but there is something about wood that brings out our creative side. Our cutting boards keep most of their bark, their rustic charm, and are ideal for your kitchen."
+            description="We are still building high-performance, energy-efficient homes, but there is something about wood that brings out our creative side. Our cutting boards keep most of their bark, their rustic charm, and are ideal for your kitchen."
             align="center"
           />
 

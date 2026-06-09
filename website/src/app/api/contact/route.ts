@@ -39,10 +39,10 @@ export async function POST(request: NextRequest) {
 
     const subject =
       data.subject ||
-      `New inquiry from ${data.name}${data.projectType ? ` — ${data.projectType}` : ""}`;
+      `New inquiry from ${data.name}${data.projectType ? ` (${data.projectType})` : ""}`;
 
     const html = `
-      <h2>New Website Inquiry — ${site.name}</h2>
+      <h2>New Website Inquiry for ${site.name}</h2>
       <table style="border-collapse:collapse;width:100%;max-width:600px;">
         <tr><td style="padding:8px;font-weight:bold;">Name</td><td style="padding:8px;">${escapeHtml(data.name)}</td></tr>
         <tr><td style="padding:8px;font-weight:bold;">Email</td><td style="padding:8px;"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td></tr>

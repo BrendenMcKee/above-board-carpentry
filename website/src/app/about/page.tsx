@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${site.name} — Red Seal certified, Passive House trained builders in the Haliburton Highlands.`,
+  description: `Learn about ${site.name}. Red Seal certified, Passive House trained builders in the Haliburton Highlands.`,
 };
 
 export default function AboutPage() {
@@ -40,7 +40,7 @@ export default function AboutPage() {
               </p>
               <p className="mt-6 leading-relaxed">
                 This certification has given Above Board Carpentry superior knowledge of building
-                science — providing you with a home that is not only stunning, but performs at an
+                science, providing you with a home that is not only stunning, but performs at an
                 extremely low operation cost.
               </p>
               <p className="mt-6 leading-relaxed">

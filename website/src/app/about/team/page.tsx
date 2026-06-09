@@ -17,7 +17,7 @@ export default function TeamPage() {
         image="/images/team/GB-small-1.jpg"
         eyebrow="Our Team"
         title="Built by people who care"
-        subtitle="A dedicated team led by Graham Borgdorff — combining building science expertise with genuine craftsmanship."
+        subtitle="A dedicated team led by Graham Borgdorff, combining building science expertise with genuine craftsmanship."
         tall={false}
         primaryCta={{ label: "Work With Us", href: "/contact" }}
         secondaryCta={{ label: "About Us", href: "/about" }}

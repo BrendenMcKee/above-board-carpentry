@@ -23,7 +23,7 @@ export const portfolioProjects: PortfolioProject[] = [
     heroImage: img("PH6-small.jpg"),
     year: "2017",
     summary:
-      "Above Board Carpentry's first Passive House — a stunning, extremely energy-efficient home in the Haliburton Highlands.",
+      "Above Board Carpentry's first Passive House. A stunning, extremely energy-efficient home in the Haliburton Highlands.",
     description:
       "This is Above Board Carpentry's first Passive House that we started in 2017. It is not only a stunning home, but it is extremely energy efficient. Here is a look at the finished exterior along with some mid-project photos that showcase the building science and craftsmanship behind every detail.",
     gallery: [
@@ -65,9 +65,9 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
     heroImage: img("IMG_0288-scaled.jpg"),
     summary:
-      "A complete house shell build — from foundation to framed structure, built to perform.",
+      "A complete house shell build from foundation to framed structure, built to perform.",
     description:
-      "A complete house shell project demonstrating Above Board Carpentry's expertise from the ground up — structural framing, envelope, and the building science that makes a home ready for high-performance living.",
+      "A complete house shell project demonstrating Above Board Carpentry's expertise from the ground up. This includes structural framing, envelope work, and the building science that makes a home ready for high-performance living.",
     gallery: [
       "IMG_0288-scaled.jpg",
       "IMG_0337-scaled.jpg",
@@ -99,7 +99,7 @@ export const portfolioProjects: PortfolioProject[] = [
     heroImage: img("IMG_6209-1-scaled.jpg"),
     summary: "Precision garage framing from the ground up.",
     description:
-      "A garage framing project highlighting the structural expertise and precision that Above Board Carpentry brings to every frame — residential or outbuilding.",
+      "A garage framing project highlighting the structural expertise and precision that Above Board Carpentry brings to every frame, whether residential or an outbuilding.",
     gallery: [
       "IMG_6209-1-scaled.jpg",
       "IMG_6210-scaled.jpg",
