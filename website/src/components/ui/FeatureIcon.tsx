@@ -80,14 +80,6 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
           <stop offset="0%" stopColor="#f2c46e" />
           <stop offset="100%" stopColor="#b87333" />
         </linearGradient>
-        <linearGradient id="fi-craft-chisel-blade" x1="6" y1="34" x2="16" y2="42">
-          <stop offset="0%" stopColor="#f4f6f8" />
-          <stop offset="100%" stopColor="#9aa3a8" />
-        </linearGradient>
-        <linearGradient id="fi-craft-chisel-handle" x1="6" y1="36" x2="12" y2="42">
-          <stop offset="0%" stopColor="#e8a55c" />
-          <stop offset="100%" stopColor="#b87333" />
-        </linearGradient>
         <linearGradient id="fi-craft-trim" x1="16" y1="30" x2="32" y2="38">
           <stop offset="0%" stopColor="#ffffff" />
           <stop offset="100%" stopColor="#f0ebe3" />
@@ -162,26 +154,6 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
       <circle cx="13.3" cy="20.9" r="0.45" fill="#f7e2b8" opacity="0.7" />
       <circle cx="34.7" cy="20.9" r="0.45" fill="#f7e2b8" opacity="0.7" />
       <circle cx="24" cy="9.1" r="0.45" fill="#f7e2b8" opacity="0.7" />
-      <path
-        d="M6.5 38.2 14.8 30.2 16.2 31.6 7.9 39.6 6.5 38.2Z"
-        fill="url(#fi-craft-chisel-blade)"
-        stroke="#7a848a"
-        strokeWidth="0.35"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M5.2 39.2 7.4 37 8.8 38.4 6.6 40.6 5.2 39.2Z"
-        fill="url(#fi-craft-chisel-handle)"
-        stroke="#8b5a24"
-        strokeWidth="0.35"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M14.8 30.2 15.8 29.2"
-        stroke="#7a848a"
-        strokeWidth="0.9"
-        strokeLinecap="round"
-      />
     </>
   ),
   local: (
