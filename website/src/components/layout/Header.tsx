@@ -17,10 +17,10 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-out ${
         scrolled
-          ? "bg-cream/90 shadow-sm backdrop-blur-xl border-b border-forest/5"
-          : "bg-transparent"
+          ? "bg-cream/90 backdrop-blur-xl shadow-sm"
+          : "bg-transparent shadow-none backdrop-blur-none"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
