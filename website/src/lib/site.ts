@@ -32,7 +32,6 @@ export const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/store", label: "ABC Store" },
-  { href: "/contact", label: "Contact" },
 ] as const;
 
 export const certifications = [

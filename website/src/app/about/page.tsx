@@ -1,6 +1,6 @@
 import { CTABand } from "@/components/sections/CTABand";
 import { Hero } from "@/components/sections/Hero";
-import { Button } from "@/components/ui/Button";
+import { TeamSection } from "@/components/sections/TeamSection";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { certifications, memberships, site } from "@/lib/site";
@@ -21,7 +21,7 @@ export default function AboutPage() {
         title="Building science. Fine craftsmanship."
         subtitle="Located in the Haliburton Highlands, we bring over 20 years of expertise to every high-performance home we build."
         tall={false}
-        primaryCta={{ label: "Meet the Team", href: "/about/team" }}
+        primaryCta={{ label: "Meet the Team", href: "#team" }}
         secondaryCta={{ label: "View Portfolio", href: "/portfolio" }}
       />
 
@@ -99,18 +99,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-5 text-center md:px-8">
-          <SectionHeading
-            eyebrow="Our Team"
-            title="The people behind every build"
-            align="center"
-          />
-          <Button href="/about/team" variant="secondary">
-            Meet the Team
-          </Button>
-        </div>
-      </section>
+      <TeamSection />
 
       <CTABand />
     </>

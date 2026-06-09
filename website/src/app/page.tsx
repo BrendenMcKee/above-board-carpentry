@@ -189,7 +189,7 @@ export default function HomePage() {
                 title={`Meet the people behind ${site.name}`}
                 description="A skilled, dedicated team led by Graham Borgdorff, committed to building science and fine carpentry."
               />
-              <Button href="/about/team" variant="ghost" className="mt-6">
+              <Button href="/about#team" variant="ghost" className="mt-6">
                 Meet the Team
               </Button>
             </FadeIn>
