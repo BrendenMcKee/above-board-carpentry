@@ -12,11 +12,18 @@ interface ProjectGalleryProps {
 
 export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const close = useCallback(() => setActiveIndex(null), []);
 
+  const openAt = useCallback((index: number) => {
+    setImageLoaded(false);
+    setActiveIndex(index);
+  }, []);
+
   const goTo = useCallback(
     (direction: -1 | 1) => {
+      setImageLoaded(false);
       setActiveIndex((current) => {
         if (current === null) return null;
         return (current + direction + images.length) % images.length;
@@ -24,6 +31,8 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
     },
     [images.length],
   );
+
+  const activeSrc = activeIndex !== null ? images[activeIndex] : null;
 
   useEffect(() => {
     if (activeIndex === null) return;
@@ -43,8 +52,6 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
     };
   }, [activeIndex, close, goTo]);
 
-  const activeSrc = activeIndex !== null ? images[activeIndex] : null;
-
   return (
     <>
       <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
@@ -52,7 +59,7 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
           <FadeIn key={src} delay={Math.min(i * 0.04, 0.6)} className="mb-4 break-inside-avoid">
             <button
               type="button"
-              onClick={() => setActiveIndex(i)}
+              onClick={() => openAt(i)}
               className="group relative block w-full overflow-hidden rounded-xl text-left ring-forest/0 transition-shadow hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-copper"
               aria-label={`View ${projectName} photo ${i + 1} of ${images.length}`}
             >
@@ -119,21 +126,27 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
               </>
             )}
 
-            <motion.div
-              key={activeSrc}
-              className="relative z-10 flex max-h-[85vh] w-full max-w-6xl flex-col items-center"
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.97 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="relative max-h-[78vh] w-full overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/15">
+            <div className="relative z-10 flex max-h-[85vh] max-w-[calc(100vw-5rem)] flex-col items-center md:max-w-[calc(100vw-8rem)]">
+              <div className="inline-block max-w-full overflow-hidden rounded-xl shadow-2xl ring-1 ring-white/15">
+                {!imageLoaded && (
+                  <div
+                    className="flex items-center justify-center bg-white/5 px-10 py-14"
+                    aria-live="polite"
+                    aria-busy="true"
+                  >
+                    <GalleryLoader />
+                  </div>
+                )}
                 <Image
+                  key={activeSrc}
                   src={activeSrc}
                   alt={`${projectName} photo ${activeIndex + 1}`}
                   width={1600}
                   height={1200}
-                  className="mx-auto h-auto max-h-[78vh] w-auto max-w-full object-contain"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`block max-h-[78vh] w-auto max-w-[calc(100vw-5rem)] md:max-w-[calc(100vw-8rem)] ${
+                    imageLoaded ? "opacity-100" : "hidden"
+                  }`}
                   sizes="100vw"
                   priority
                 />
@@ -141,11 +154,21 @@ export function ProjectGallery({ images, projectName }: ProjectGalleryProps) {
               <p className="mt-4 text-sm font-medium text-white/80">
                 {activeIndex + 1} of {images.length}
               </p>
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+function GalleryLoader() {
+  return (
+    <div
+      className="h-9 w-9 animate-spin rounded-full border-2 border-white/20 border-t-white/75"
+      role="status"
+      aria-label="Loading image"
+    />
   );
 }
 
