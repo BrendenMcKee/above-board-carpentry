@@ -3,7 +3,6 @@ import { CTABand } from "@/components/sections/CTABand";
 import { Hero } from "@/components/sections/Hero";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { Button } from "@/components/ui/Button";
-import { FeatureCard } from "@/components/ui/FeatureCard";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { portfolioProjects } from "@/lib/portfolio";
@@ -34,24 +33,33 @@ export default function HomePage() {
             align="center"
           />
           <div className="grid gap-6 md:grid-cols-3">
-            <FeatureCard
-              icon="performance"
-              title="Performance"
-              description="Passive House and Net Zero expertise means your home performs at an extremely low operating cost."
-              delay={0}
-            />
-            <FeatureCard
-              icon="craft"
-              title="Craft"
-              description="From hand-cut timber framing to fine interior finishing, every detail reflects our commitment to quality."
-              delay={0.1}
-            />
-            <FeatureCard
-              icon="local"
-              title="Local Expertise"
-              description="Rooted in the Haliburton Highlands since 2017. We know this land, this climate, and these communities."
-              delay={0.2}
-            />
+            {[
+              {
+                title: "Performance",
+                desc: "Passive House and Net Zero expertise means your home performs at an extremely low operating cost.",
+                icon: "⚡",
+              },
+              {
+                title: "Craft",
+                desc: "From hand-cut timber framing to fine interior finishing, every detail reflects our commitment to quality.",
+                icon: "🪵",
+              },
+              {
+                title: "Local Expertise",
+                desc: "Rooted in the Haliburton Highlands since 2017. We know this land, this climate, and these communities.",
+                icon: "🏔️",
+              },
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.1}>
+                <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-forest/8 transition-shadow hover:shadow-md">
+                  <span className="text-3xl">{item.icon}</span>
+                  <h3 className="font-display mt-4 text-xl font-semibold text-charcoal">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{item.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
