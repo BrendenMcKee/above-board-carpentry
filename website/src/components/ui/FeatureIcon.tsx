@@ -62,64 +62,44 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
   craft: (
     <>
       <defs>
-        <linearGradient id="fi-craft-wood" x1="5" y1="30" x2="43" y2="40">
-          <stop offset="0%" stopColor="#d4a85a" />
-          <stop offset="50%" stopColor="#a67c2e" />
-          <stop offset="100%" stopColor="#7a5520" />
-        </linearGradient>
-        <linearGradient id="fi-craft-endgrain" x1="5" y1="31" x2="11" y2="39">
-          <stop offset="0%" stopColor="#c49a4a" />
-          <stop offset="100%" stopColor="#6b4a22" />
-        </linearGradient>
-        <linearGradient id="fi-craft-blade" x1="18" y1="12" x2="40" y2="36">
+        <linearGradient id="fi-craft-steel" x1="10" y1="10" x2="38" y2="22">
           <stop offset="0%" stopColor="#f2f4f6" />
-          <stop offset="100%" stopColor="#9aa3a8" />
+          <stop offset="100%" stopColor="#8f989d" />
         </linearGradient>
-        <linearGradient id="fi-craft-handle" x1="10" y1="8" x2="20" y2="22">
+        <linearGradient id="fi-craft-handle" x1="20" y1="22" x2="34" y2="42">
           <stop offset="0%" stopColor="#e8a55c" />
           <stop offset="100%" stopColor="#b87333" />
         </linearGradient>
+        <linearGradient id="fi-craft-plank" x1="8" y1="34" x2="40" y2="42">
+          <stop offset="0%" stopColor="#d4a85a" />
+          <stop offset="100%" stopColor="#7a5520" />
+        </linearGradient>
       </defs>
-      <rect x="5" y="31" width="38" height="8.5" rx="1" fill="url(#fi-craft-wood)" />
-      <rect x="5" y="31" width="6" height="8.5" rx="1" fill="url(#fi-craft-endgrain)" />
-      <ellipse cx="8" cy="35.2" rx="2" ry="2.8" fill="#5c3d1e" opacity="0.35" />
-      <ellipse cx="8" cy="35.2" rx="0.9" ry="1.2" fill="#4a3018" opacity="0.3" />
+      <rect x="8" y="35" width="32" height="6.5" rx="1" fill="url(#fi-craft-plank)" />
       <path
-        d="M9 33.5h28M9 35.2h28M9 36.8h28"
+        d="M12 37.2h24"
         stroke="#5c3d1e"
-        strokeWidth="0.4"
+        strokeWidth="0.45"
         strokeLinecap="round"
         opacity="0.3"
       />
-      <rect x="35.5" y="27" width="1.3" height="12.5" rx="0.3" fill="#8a9398" />
-      <circle cx="36.1" cy="26.2" r="2.1" fill="#b87333" />
-      <circle cx="36.1" cy="26.2" r="1.1" fill="#d4894a" opacity="0.55" />
       <path
-        d="M11 10.5c0-2.2 1.8-4 4-4h1.8c2 0 3.6 1.6 3.6 3.6v5.2l-4.2 1.8-5.2-2V14.5c0-1.1.4-2.2 1-3Z"
+        d="M10 12.5h24a2 2 0 0 1 2 2v5.5a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-5.5a2 2 0 0 1 2-2Z"
+        fill="url(#fi-craft-steel)"
+      />
+      <path
+        d="M8 16.5 5.5 20.5 8.5 21.5 11 17.5 8 16.5Z"
+        fill="#6f787d"
+      />
+      <path
+        d="M34 16.5 36.5 20.5 33.5 21.5 31 17.5 34 16.5Z"
+        fill="#6f787d"
+      />
+      <path
+        d="M21.5 21.5c0-1.2 1-2.2 2.2-2.2h1.6c1.2 0 2.2 1 2.2 2.2v16.8c0 1.2-1 2.2-2.2 2.2h-1.6c-1.2 0-2.2-1-2.2-2.2V21.5Z"
         fill="url(#fi-craft-handle)"
-        stroke="#8b5a24"
-        strokeWidth="0.45"
-        strokeLinejoin="round"
       />
-      <ellipse cx="14.5" cy="14" rx="2.4" ry="3.5" fill="#8b5a24" opacity="0.28" />
-      <path
-        d="M18.5 18.5 39.5 36.2 38.2 37.8 17.2 20.1 18.5 18.5Z"
-        fill="url(#fi-craft-blade)"
-        stroke="#7a848a"
-        strokeWidth="0.5"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M22 32.2 23.4 30.8 24.8 32.2 23.4 33.6 22 32.2ZM26 34.2 27.4 32.8 28.8 34.2 27.4 35.6 26 34.2ZM30 36 31.4 34.6 32.8 36 31.4 37.4 30 36ZM34 37.6 35.4 36.2 36.8 37.6 35.4 39 34 37.6Z"
-        fill="#c5ccd0"
-      />
-      <path
-        d="M24 31.5 27 34.5"
-        stroke="#4a3018"
-        strokeWidth="0.8"
-        strokeLinecap="round"
-        opacity="0.45"
-      />
+      <ellipse cx="24" cy="22.5" rx="3.2" ry="1.2" fill="#8b5a24" opacity="0.35" />
     </>
   ),
   local: (
@@ -174,11 +154,11 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
         strokeLinecap="round"
       />
       <path
-        d="M24 30.5c0-3 2.4-5.4 5.4-5.4s5.4 2.4 5.4 5.4c0 1-.3 2-.8 2.9l-4.6 6.1-4.6-6.1c-.5-.9-.8-1.9-.8-2.9Z"
+        d="M24 12.5c-3.8 0-6.9 3.1-6.9 6.9 0 5.2 6.9 13.1 6.9 13.1s6.9-7.9 6.9-13.1c0-3.8-3.1-6.9-6.9-6.9Z"
         fill="#b87333"
       />
-      <circle cx="24" cy="30.5" r="2.1" fill="#f7f5f0" />
-      <circle cx="24" cy="30.5" r="0.8" fill="#b87333" />
+      <circle cx="24" cy="19.4" r="3" fill="#f7f5f0" />
+      <circle cx="24" cy="19.4" r="1.15" fill="#b87333" />
     </>
   ),
 };
