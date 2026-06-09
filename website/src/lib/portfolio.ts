@@ -43,14 +43,14 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     slug: "bob-cottage-renovation",
-    name: "Bob: a Cottage Renovation",
+    name: "Bob: a cottage renovation",
     type: "renovation",
     featured: true,
     heroImage: img("IMG_5517-scaled.jpg"),
     summary:
-      "A significant cottage renovation demonstrating craft-quality finishes and thoughtful transformation.",
+      "A complete cottage overhaul with a new outdoor living space.",
     description:
-      "A significant cottage renovation project showcasing Above Board Carpentry's ability to transform existing structures with precision, care, and an eye for detail that respects both the building and its surroundings.",
+      "This cottage had a complete overhaul on the inside as well as gained a new outdoor living space. Here is the finished product along with some mid-project photos.",
     gallery: [
       "IMG_5517-scaled.jpg",
       "IMG_5436-scaled.jpg",
@@ -60,14 +60,14 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     slug: "drag-house",
-    name: "Drag: a House",
+    name: "Drag: a house",
     type: "residential",
     featured: true,
     heroImage: img("IMG_0288-scaled.jpg"),
     summary:
-      "A complete house shell build from foundation to framed structure, built to perform.",
+      "A complete house shell built from the ground up.",
     description:
-      "A complete house shell project demonstrating Above Board Carpentry's expertise from the ground up. This includes structural framing, envelope work, and the building science that makes a home ready for high-performance living.",
+      "We completed this house's shell from the ground up. These photos show an overview of the building journey. We started with excavation, completed the shell, and finished with primed drywall on the main floor.",
     gallery: [
       "IMG_0288-scaled.jpg",
       "IMG_0337-scaled.jpg",
