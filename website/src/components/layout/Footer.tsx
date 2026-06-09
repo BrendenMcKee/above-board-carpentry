@@ -9,11 +9,13 @@ const legalLinks = [
 ];
 
 export function Footer() {
+  const navMidpoint = Math.ceil(navLinks.length / 2);
+
   return (
     <footer className="bg-forest-dark text-white">
       <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-14">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:items-start lg:gap-x-12 lg:gap-y-8">
-          <div className="sm:col-span-2 lg:col-span-5">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:items-start lg:gap-x-0 lg:gap-y-8">
+          <div className="sm:col-span-2 lg:col-span-5 lg:pr-10">
             <p className="font-display text-2xl font-semibold">{site.name}</p>
             <p className="mt-1 text-sm text-white/60">{site.tagline}</p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/70">
@@ -37,30 +39,45 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="border-t border-white/10 pt-8 sm:border-t-0 sm:pt-0 sm:border-l sm:pl-8 lg:col-span-3 lg:pl-10">
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-copper">
               Navigate
             </p>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="flex gap-6">
+              <ul className="flex-1 space-y-2">
+                {navLinks.slice(0, navMidpoint).map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/70 transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="w-px shrink-0 bg-white/10" aria-hidden="true" />
+              <ul className="flex-1 space-y-2">
+                {navLinks.slice(navMidpoint).map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/70 transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="lg:col-span-4">
+          <div className="border-t border-white/10 pt-8 sm:border-t-0 sm:border-l sm:pl-8 sm:pt-0 lg:col-span-4 lg:pl-10">
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-copper">
               Contact
             </p>
-            <address className="not-italic grid gap-x-8 gap-y-2 text-sm text-white/70 sm:grid-cols-2">
-              <p className="sm:col-span-2">{site.address.full}</p>
+            <address className="not-italic space-y-2 text-sm text-white/70">
+              <p>{site.address.full}</p>
               <p>
                 <a
                   href={`tel:${site.contact.phoneTel}`}
@@ -77,7 +94,7 @@ export function Footer() {
                   {site.contact.email}
                 </a>
               </p>
-              <p className="sm:col-span-2">{site.contact.hours}</p>
+              <p>{site.contact.hours}</p>
             </address>
           </div>
         </div>
