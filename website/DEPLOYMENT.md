@@ -37,9 +37,11 @@ CONTACT_TO_EMAIL=info@aboveboardcarpentry.com
 |---------|-------|
 | Vercel project | `above-board-carpentry` |
 | Root directory | `website` |
-| Production branch | `master` |
+| Production branch | `main` |
 
-Pushes to `master` automatically deploy to Vercel via GitHub Actions (`.github/workflows/vercel-deploy.yml`).
+Pushes to `main` automatically deploy to Vercel via GitHub Actions (`.github/workflows/vercel-deploy.yml`).
+
+> **Note:** Keep the `above-board-carpentry` Vercel project. The separate `website` project was created accidentally by CI and is safe to delete.
 
 ### Optional: Native Vercel Git integration
 
