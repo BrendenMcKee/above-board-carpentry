@@ -62,61 +62,63 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
   craft: (
     <>
       <defs>
-        <linearGradient id="fi-craft-wood" x1="6" y1="28" x2="42" y2="40">
+        <linearGradient id="fi-craft-wood" x1="5" y1="30" x2="43" y2="40">
           <stop offset="0%" stopColor="#d4a85a" />
           <stop offset="50%" stopColor="#a67c2e" />
           <stop offset="100%" stopColor="#7a5520" />
         </linearGradient>
-        <linearGradient id="fi-craft-blade" x1="26" y1="10" x2="40" y2="36">
-          <stop offset="0%" stopColor="#eef1f3" />
+        <linearGradient id="fi-craft-endgrain" x1="5" y1="31" x2="11" y2="39">
+          <stop offset="0%" stopColor="#c49a4a" />
+          <stop offset="100%" stopColor="#6b4a22" />
+        </linearGradient>
+        <linearGradient id="fi-craft-blade" x1="18" y1="12" x2="40" y2="36">
+          <stop offset="0%" stopColor="#f2f4f6" />
           <stop offset="100%" stopColor="#9aa3a8" />
         </linearGradient>
-        <linearGradient id="fi-craft-handle" x1="18" y1="8" x2="28" y2="20">
-          <stop offset="0%" stopColor="#d4894a" />
+        <linearGradient id="fi-craft-handle" x1="10" y1="8" x2="20" y2="22">
+          <stop offset="0%" stopColor="#e8a55c" />
           <stop offset="100%" stopColor="#b87333" />
         </linearGradient>
       </defs>
-      <rect x="6" y="29" width="36" height="9" rx="1.2" fill="url(#fi-craft-wood)" />
+      <rect x="5" y="31" width="38" height="8.5" rx="1" fill="url(#fi-craft-wood)" />
+      <rect x="5" y="31" width="6" height="8.5" rx="1" fill="url(#fi-craft-endgrain)" />
+      <ellipse cx="8" cy="35.2" rx="2" ry="2.8" fill="#5c3d1e" opacity="0.35" />
+      <ellipse cx="8" cy="35.2" rx="0.9" ry="1.2" fill="#4a3018" opacity="0.3" />
       <path
-        d="M8 31.5h32M8 33.5h32M8 35.5h32"
+        d="M9 33.5h28M9 35.2h28M9 36.8h28"
         stroke="#5c3d1e"
-        strokeWidth="0.45"
+        strokeWidth="0.4"
         strokeLinecap="round"
-        opacity="0.35"
+        opacity="0.3"
       />
+      <rect x="35.5" y="27" width="1.3" height="12.5" rx="0.3" fill="#8a9398" />
+      <circle cx="36.1" cy="26.2" r="2.1" fill="#b87333" />
+      <circle cx="36.1" cy="26.2" r="1.1" fill="#d4894a" opacity="0.55" />
       <path
-        d="M22.5 10.5 38.5 35.5 36.8 36.8 20.8 11.8 22.5 10.5Z"
+        d="M11 10.5c0-2.2 1.8-4 4-4h1.8c2 0 3.6 1.6 3.6 3.6v5.2l-4.2 1.8-5.2-2V14.5c0-1.1.4-2.2 1-3Z"
+        fill="url(#fi-craft-handle)"
+        stroke="#8b5a24"
+        strokeWidth="0.45"
+        strokeLinejoin="round"
+      />
+      <ellipse cx="14.5" cy="14" rx="2.4" ry="3.5" fill="#8b5a24" opacity="0.28" />
+      <path
+        d="M18.5 18.5 39.5 36.2 38.2 37.8 17.2 20.1 18.5 18.5Z"
         fill="url(#fi-craft-blade)"
         stroke="#7a848a"
         strokeWidth="0.5"
         strokeLinejoin="round"
       />
       <path
-        d="M37 36.2l1.6-1.2 1.4 1.6-1.6 1.2-1.4-1.6ZM38.8 38l1.6-1.2 1.4 1.6-1.6 1.2-1.4-1.6ZM40.6 39.8l1.5-1.1 1.3 1.5-1.5 1.1-1.3-1.5Z"
-        fill="#b8c0c5"
+        d="M22 32.2 23.4 30.8 24.8 32.2 23.4 33.6 22 32.2ZM26 34.2 27.4 32.8 28.8 34.2 27.4 35.6 26 34.2ZM30 36 31.4 34.6 32.8 36 31.4 37.4 30 36ZM34 37.6 35.4 36.2 36.8 37.6 35.4 39 34 37.6Z"
+        fill="#c5ccd0"
       />
       <path
-        d="M14 9.5c2.5-1.5 5.5-1.2 7.8.8 1.4 1.2 2.2 3 2.2 4.8v2.2l-3.2 1.2-5.8-2.2V13.5c0-1.2.4-2.4 1-3Z"
-        fill="url(#fi-craft-handle)"
-        stroke="#8b5a24"
-        strokeWidth="0.45"
-        strokeLinejoin="round"
-      />
-      <ellipse cx="20" cy="14.5" rx="2.2" ry="3.2" fill="#8b5a24" opacity="0.35" />
-      <path
-        d="M22.5 10.5 20.8 11.8 18.8 10.2 20.2 8.8 22.5 10.5Z"
-        fill="#9aa3a8"
-        stroke="#7a848a"
-        strokeWidth="0.35"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M30 26c1.8 1 3.6 2.2 4.8 4"
-        fill="none"
-        stroke="#e8c878"
-        strokeWidth="1"
+        d="M24 31.5 27 34.5"
+        stroke="#4a3018"
+        strokeWidth="0.8"
         strokeLinecap="round"
-        opacity="0.85"
+        opacity="0.45"
       />
     </>
   ),
@@ -155,28 +157,28 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
         fill="#dce8f0"
         opacity="0.35"
       />
-      <path d="M10 37V27l3.2-5.2 3.2 5.2v10H10Z" fill="#2c4a3e" />
+      <path d="M8 37V28l3.4-5.5 3.4 5.5v9H8Z" fill="#2c4a3e" />
       <path
-        d="M11.5 31c1.3-.9 2.6-.9 3.9 0M11.5 33.8c1.3-.9 2.6-.9 3.9 0M11.5 36.5c1.3-.9 2.6-.9 3.9 0"
+        d="M9.5 31.5c1.4-1 2.8-1 4.2 0M9.5 34.2c1.4-1 2.8-1 4.2 0M9.5 36.8c1.4-1 2.8-1 4.2 0"
         fill="none"
         stroke="#7a8b6f"
         strokeWidth="0.75"
         strokeLinecap="round"
       />
-      <path d="M28.5 37V28.5l2.9-4.6 2.9 4.6V37H28.5Z" fill="#1e3329" />
+      <path d="M34 37V28.5l3.2-5.2 3.2 5.2V37H34Z" fill="#1e3329" />
       <path
-        d="M29.8 32.2c1-.7 2-.7 3 0M29.8 34.7c1-.7 2-.7 3 0M29.8 37.2c1-.7 2-.7 3 0"
+        d="M35.2 32c1.1-.8 2.2-.8 3.3 0M35.2 34.5c1.1-.8 2.2-.8 3.3 0M35.2 37c1.1-.8 2.2-.8 3.3 0"
         fill="none"
         stroke="#4a6b5c"
         strokeWidth="0.7"
         strokeLinecap="round"
       />
       <path
-        d="M22.5 29.5c0-3.1 2.5-5.6 5.6-5.6s5.6 2.5 5.6 5.6c0 1.1-.3 2.2-.9 3.1l-4.7 6.3-4.7-6.3c-.6-.9-.9-2-.9-3.1Z"
+        d="M24 30.5c0-3 2.4-5.4 5.4-5.4s5.4 2.4 5.4 5.4c0 1-.3 2-.8 2.9l-4.6 6.1-4.6-6.1c-.5-.9-.8-1.9-.8-2.9Z"
         fill="#b87333"
       />
-      <circle cx="28.1" cy="29.5" r="2.2" fill="#f7f5f0" />
-      <circle cx="28.1" cy="29.5" r="0.85" fill="#b87333" />
+      <circle cx="24" cy="30.5" r="2.1" fill="#f7f5f0" />
+      <circle cx="24" cy="30.5" r="0.8" fill="#b87333" />
     </>
   ),
 };
