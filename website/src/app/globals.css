@@ -41,9 +41,9 @@ body {
 .hero-overlay {
   background: linear-gradient(
     to top,
-    rgb(0 0 0 / 0.45) 0%,
-    rgb(0 0 0 / 0.1) 40%,
-    transparent 100%
+    rgb(0 0 0 / 0.55) 0%,
+    rgb(0 0 0 / 0.28) 50%,
+    rgb(0 0 0 / 0.18) 100%
   );
 }
 
