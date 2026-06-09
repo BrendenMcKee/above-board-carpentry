@@ -43,7 +43,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     slug: "bob-cottage-renovation",
-    name: "Bob: a cottage renovation",
+    name: "Bob: a Cottage Renovation",
     type: "renovation",
     featured: true,
     heroImage: img("IMG_5517-scaled.jpg"),
@@ -60,7 +60,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     slug: "drag-house",
-    name: "Drag: a house",
+    name: "Drag: a House",
     type: "residential",
     featured: true,
     heroImage: img("IMG_0288-scaled.jpg"),
