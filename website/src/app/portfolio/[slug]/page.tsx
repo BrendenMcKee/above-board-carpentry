@@ -35,7 +35,10 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <>
-      <section className="relative flex min-h-[50vh] items-end overflow-hidden md:min-h-[60vh]">
+      <section
+        data-no-page-lightbox
+        className="relative flex min-h-[50vh] items-end overflow-hidden md:min-h-[60vh]"
+      >
         <Image
           src={project.heroImage}
           alt={project.name}

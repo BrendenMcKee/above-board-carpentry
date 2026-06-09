@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
+import { PageLightbox } from "@/components/ui/PageLightbox";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <MobileCallBar />
+        <PageLightbox />
       </body>
     </html>
   );

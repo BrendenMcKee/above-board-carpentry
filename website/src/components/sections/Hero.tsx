@@ -37,6 +37,7 @@ export function Hero({
   return (
     <section
       ref={ref}
+      data-no-page-lightbox
       className={`relative flex items-end overflow-hidden ${
         tall ? "min-h-[92vh] md:min-h-screen" : "min-h-[50vh] md:min-h-[60vh]"
       }`}

@@ -80,3 +80,7 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+.page-lightbox-target {
+  cursor: zoom-in;
+}
