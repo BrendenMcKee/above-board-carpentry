@@ -67,7 +67,7 @@ export const memberships = [
   {
     name: "Passive Buildings Canada",
     url: "https://www.passivebuildings.ca/",
-    image: "/images/branding/Passive-buildings-canada.png",
+    image: "/images/branding/passive-buildings-canada.png",
   },
 ] as const;
 
