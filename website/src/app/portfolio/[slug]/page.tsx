@@ -1,4 +1,5 @@
 import { CTABand } from "@/components/sections/CTABand";
+import { ProjectGallery } from "@/components/sections/ProjectGallery";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { getProject, portfolioProjects } from "@/lib/portfolio";
@@ -93,22 +94,7 @@ export default async function ProjectPage({ params }: Props) {
               Project Gallery
             </h2>
           </FadeIn>
-          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {project.gallery.map((src, i) => (
-              <FadeIn key={src} delay={i * 0.04} className="mb-4 break-inside-avoid">
-                <div className="relative overflow-hidden rounded-xl">
-                  <Image
-                    src={src}
-                    alt={`${project.name} photo ${i + 1}`}
-                    width={800}
-                    height={600}
-                    className="h-auto w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          <ProjectGallery images={project.gallery} projectName={project.name} />
         </div>
       </section>
 
