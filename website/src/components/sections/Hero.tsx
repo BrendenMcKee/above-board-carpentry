@@ -63,7 +63,7 @@ export function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-copper"
+            className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-copper drop-shadow-sm"
           >
             {eyebrow}
           </motion.p>
@@ -81,7 +81,7 @@ export function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg"
+            className="mt-6 max-w-2xl text-lg font-medium leading-relaxed text-white/90 drop-shadow-sm md:text-xl"
           >
             {subtitle}
           </motion.p>
@@ -104,7 +104,7 @@ export function Hero({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="mt-10 hidden items-center gap-6 text-sm text-white/60 md:flex"
+          className="mt-10 hidden items-center gap-6 text-sm font-medium text-white/85 drop-shadow-sm md:text-base md:flex"
         >
           <span>{site.address.region}</span>
           <span className="h-1 w-1 rounded-full bg-copper" />

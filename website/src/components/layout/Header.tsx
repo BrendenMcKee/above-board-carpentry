@@ -44,8 +44,8 @@ export function Header() {
               {site.name}
             </p>
             <p
-              className={`text-[10px] uppercase tracking-[0.15em] ${
-                scrolled ? "text-muted" : "text-white/70"
+              className={`text-xs font-medium uppercase tracking-[0.15em] ${
+                scrolled ? "text-muted" : "text-white/85"
               }`}
             >
               {site.tagline}
@@ -58,10 +58,10 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                 scrolled
                   ? "text-charcoal hover:bg-forest/5 hover:text-forest"
-                  : "text-white/90 hover:bg-white/10 hover:text-white"
+                  : "text-white drop-shadow-sm hover:bg-white/10 hover:text-white"
               }`}
             >
               {link.label}

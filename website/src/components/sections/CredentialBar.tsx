@@ -7,7 +7,7 @@ export function CredentialBar() {
     <section className="border-y border-forest/8 bg-white py-8 md:py-10">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <FadeIn>
-          <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.2em] text-muted">
+          <p className="mb-6 text-center text-sm font-bold uppercase tracking-[0.2em] text-muted">
             Certified & Accredited
           </p>
         </FadeIn>
@@ -29,7 +29,7 @@ export function CredentialBar() {
                     className="object-contain opacity-80 transition-opacity group-hover:opacity-100"
                   />
                 </div>
-                <span className="text-center text-[10px] font-medium text-muted md:text-xs">
+                <span className="text-center text-xs font-semibold text-muted md:text-sm">
                   {cert.name}
                 </span>
               </a>

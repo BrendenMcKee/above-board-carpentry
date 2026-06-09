@@ -46,14 +46,16 @@ export default async function ProjectPage({ params }: Props) {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-12 pt-32 md:px-8 md:pb-16">
           <Link
             href="/portfolio"
-            className="mb-4 inline-flex items-center gap-1 text-sm text-white/70 hover:text-white transition-colors"
+            className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-white/85 hover:text-white transition-colors"
           >
             ← Back to Portfolio
           </Link>
           <h1 className="font-display text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-6xl">
             {project.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/80">{project.summary}</p>
+          <p className="mt-4 max-w-2xl text-base font-medium text-white/90 drop-shadow-sm md:text-lg">
+            {project.summary}
+          </p>
         </div>
       </section>
 
