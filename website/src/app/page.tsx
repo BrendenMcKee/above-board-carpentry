@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { FeatureIcon } from "@/components/ui/FeatureIcon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { portfolioProjects } from "@/lib/portfolio";
 import { services, site, team } from "@/lib/site";
@@ -37,23 +38,25 @@ export default function HomePage() {
               {
                 title: "Performance",
                 desc: "Passive House and Net Zero expertise means your home performs at an extremely low operating cost.",
-                icon: "⚡",
+                icon: "performance" as const,
               },
               {
                 title: "Craft",
                 desc: "From hand-cut timber framing to fine interior finishing, every detail reflects our commitment to quality.",
-                icon: "🪵",
+                icon: "craft" as const,
               },
               {
                 title: "Local Expertise",
                 desc: "Rooted in the Haliburton Highlands since 2017. We know this land, this climate, and these communities.",
-                icon: "🏔️",
+                icon: "local" as const,
               },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
-                <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-forest/8 transition-shadow hover:shadow-md">
-                  <span className="text-3xl">{item.icon}</span>
-                  <h3 className="font-display mt-4 text-xl font-semibold text-charcoal">
+                <div className="group rounded-2xl bg-white p-8 shadow-sm ring-1 ring-forest/8 transition-shadow hover:shadow-md">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cream to-forest/5 ring-1 ring-forest/10 transition-colors group-hover:from-white group-hover:to-copper/8">
+                    <FeatureIcon name={item.icon} />
+                  </div>
+                  <h3 className="font-display mt-5 text-xl font-semibold text-charcoal">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{item.desc}</p>
