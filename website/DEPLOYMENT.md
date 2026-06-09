@@ -29,6 +29,26 @@ CONTACT_TO_EMAIL=info@aboveboardcarpentry.com
 
 5. Restart the dev server after adding env vars
 
+## Git repository
+
+**GitHub:** [github.com/BrendenMcKee/above-board-carpentry](https://github.com/BrendenMcKee/above-board-carpentry)
+
+| Setting | Value |
+|---------|-------|
+| Vercel project | `above-board-carpentry` |
+| Root directory | `website` |
+| Production branch | `master` |
+
+Pushes to `master` automatically deploy to Vercel via GitHub Actions (`.github/workflows/vercel-deploy.yml`).
+
+### Optional: Native Vercel Git integration
+
+For Vercel dashboard deploy previews on pull requests, connect the repo in Vercel:
+
+1. Open [GitHub → Settings → Applications → Vercel](https://github.com/settings/installations) → **Configure**
+2. Under **Repository access**, add `above-board-carpentry`
+3. In [Vercel project Git settings](https://vercel.com/brendenmckees-projects/above-board-carpentry/settings/git), connect the repository
+
 ## Deploy to Vercel
 
 ### Option A — Vercel Dashboard (recommended)
