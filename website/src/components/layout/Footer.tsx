@@ -9,6 +9,8 @@ const legalLinks = [
 ];
 
 export function Footer() {
+  const navMidpoint = Math.ceil(navLinks.length / 2);
+
   return (
     <footer className="bg-forest-dark text-white">
       <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-14">
@@ -41,18 +43,32 @@ export function Footer() {
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-copper">
               Navigate
             </p>
-            <ul className="space-y-1.5">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="flex gap-8">
+              <ul className="space-y-1.5">
+                {navLinks.slice(0, navMidpoint).map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/70 transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-1.5">
+                {navLinks.slice(navMidpoint).map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/70 transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="border-t border-white/10 pt-8 sm:border-t-0 sm:border-l sm:pl-8 sm:pt-0 lg:col-span-4 lg:pl-10">
