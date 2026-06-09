@@ -24,13 +24,14 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="group flex items-center gap-3">
-          <div className="relative h-10 w-10 overflow-hidden rounded-lg bg-forest shadow-md transition-transform group-hover:scale-105 md:h-11 md:w-11">
+        <Link href="/" className="group flex items-center gap-3" aria-label={site.name}>
+          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg shadow-md transition-transform group-hover:scale-105 md:h-11 md:w-11">
             <Image
-              src="/images/logo.png"
-              alt={site.name}
-              fill
-              className="object-cover"
+              src="/icon.svg"
+              alt=""
+              width={44}
+              height={44}
+              className="h-full w-full"
               priority
             />
           </div>
