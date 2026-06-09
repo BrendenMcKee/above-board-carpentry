@@ -108,8 +108,9 @@ export default function HomePage() {
                   src="/images/hero/Timber-2.jpg"
                   alt="Graham trimming a hand cut, custom timber"
                   fill
+                  quality={85}
                   className="object-cover"
-                  sizes="25vw"
+                  sizes="(max-width: 1024px) 50vw, 300px"
                 />
               </FadeIn>
               <FadeIn delay={0.1} className="relative mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
@@ -117,8 +118,9 @@ export default function HomePage() {
                   src="/images/hero/Sanders-shell.jpg"
                   alt="A home with exterior walls and truss system in place"
                   fill
+                  quality={85}
                   className="object-cover"
-                  sizes="25vw"
+                  sizes="(max-width: 1024px) 50vw, 300px"
                 />
               </FadeIn>
             </div>
