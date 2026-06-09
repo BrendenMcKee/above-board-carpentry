@@ -62,101 +62,121 @@ const icons: Record<FeatureIconName, React.ReactNode> = {
   craft: (
     <>
       <defs>
-        <linearGradient id="fi-craft-beam-h" x1="8" y1="16" x2="40" y2="24">
+        <linearGradient id="fi-craft-wood" x1="6" y1="28" x2="42" y2="40">
           <stop offset="0%" stopColor="#d4a85a" />
           <stop offset="50%" stopColor="#a67c2e" />
           <stop offset="100%" stopColor="#7a5520" />
         </linearGradient>
-        <linearGradient id="fi-craft-beam-v" x1="12" y1="18" x2="22" y2="40">
-          <stop offset="0%" stopColor="#c49a4a" />
-          <stop offset="100%" stopColor="#6b4a22" />
+        <linearGradient id="fi-craft-blade" x1="26" y1="10" x2="40" y2="36">
+          <stop offset="0%" stopColor="#eef1f3" />
+          <stop offset="100%" stopColor="#9aa3a8" />
         </linearGradient>
-        <linearGradient id="fi-craft-blade" x1="30" y1="10" x2="40" y2="22">
-          <stop offset="0%" stopColor="#e8ecef" />
-          <stop offset="100%" stopColor="#a8b0b6" />
+        <linearGradient id="fi-craft-handle" x1="18" y1="8" x2="28" y2="20">
+          <stop offset="0%" stopColor="#d4894a" />
+          <stop offset="100%" stopColor="#b87333" />
         </linearGradient>
       </defs>
-      <rect x="8" y="17" width="30" height="7" rx="1" fill="url(#fi-craft-beam-h)" />
-      <rect x="13" y="17" width="8" height="21" rx="1" fill="url(#fi-craft-beam-v)" />
+      <rect x="6" y="29" width="36" height="9" rx="1.2" fill="url(#fi-craft-wood)" />
       <path
-        d="M10 19.5h26M10 21.5h26"
+        d="M8 31.5h32M8 33.5h32M8 35.5h32"
         stroke="#5c3d1e"
         strokeWidth="0.45"
         strokeLinecap="round"
         opacity="0.35"
       />
       <path
-        d="M15 20h4.5M15 24h4.5M15 28h4.5M15 32h4.5"
-        stroke="#4a3018"
-        strokeWidth="0.5"
-        strokeLinecap="round"
-        opacity="0.3"
-      />
-      <circle cx="17" cy="17" r="2.2" fill="#b87333" />
-      <circle cx="17" cy="17" r="0.9" fill="#f0c06a" />
-      <path
-        d="M31 11.5 38.5 19l-1.4 1.6-7.5-7.5 1.4-1.6Z"
+        d="M22.5 10.5 38.5 35.5 36.8 36.8 20.8 11.8 22.5 10.5Z"
         fill="url(#fi-craft-blade)"
         stroke="#7a848a"
-        strokeWidth="0.45"
+        strokeWidth="0.5"
         strokeLinejoin="round"
       />
       <path
-        d="M29.5 10l2.8-2.2 2.5 2.5-2.8 2.2-2.5-2.5Z"
-        fill="#b87333"
+        d="M37 36.2l1.6-1.2 1.4 1.6-1.6 1.2-1.4-1.6ZM38.8 38l1.6-1.2 1.4 1.6-1.6 1.2-1.4-1.6ZM40.6 39.8l1.5-1.1 1.3 1.5-1.5 1.1-1.3-1.5Z"
+        fill="#b8c0c5"
+      />
+      <path
+        d="M14 9.5c2.5-1.5 5.5-1.2 7.8.8 1.4 1.2 2.2 3 2.2 4.8v2.2l-3.2 1.2-5.8-2.2V13.5c0-1.2.4-2.4 1-3Z"
+        fill="url(#fi-craft-handle)"
         stroke="#8b5a24"
+        strokeWidth="0.45"
+        strokeLinejoin="round"
+      />
+      <ellipse cx="20" cy="14.5" rx="2.2" ry="3.2" fill="#8b5a24" opacity="0.35" />
+      <path
+        d="M22.5 10.5 20.8 11.8 18.8 10.2 20.2 8.8 22.5 10.5Z"
+        fill="#9aa3a8"
+        stroke="#7a848a"
         strokeWidth="0.35"
         strokeLinejoin="round"
       />
       <path
-        d="M34 24.5c2.2 0.8 4.2 2.4 5.5 4.8"
+        d="M30 26c1.8 1 3.6 2.2 4.8 4"
         fill="none"
-        stroke="#b87333"
-        strokeWidth="1.2"
+        stroke="#e8c878"
+        strokeWidth="1"
         strokeLinecap="round"
-      />
-      <path
-        d="M39 30.5l1.8 1.2-1.8 1.2-1.2-1.8 1.2-1.2Z"
-        fill="#8b5a24"
+        opacity="0.85"
       />
     </>
   ),
   local: (
     <>
       <defs>
-        <linearGradient id="fi-local-sky" x1="4" y1="6" x2="44" y2="18">
+        <linearGradient id="fi-local-atmosphere" x1="24" y1="6" x2="24" y2="38">
           <stop offset="0%" stopColor="#9ebdd0" />
-          <stop offset="100%" stopColor="#dce8f0" />
+          <stop offset="45%" stopColor="#b8cdd8" />
+          <stop offset="72%" stopColor="#8fafbc" />
+          <stop offset="100%" stopColor="#6b8f62" />
         </linearGradient>
-        <linearGradient id="fi-local-mtn-far" x1="4" y1="16" x2="28" y2="36">
-          <stop offset="0%" stopColor="#6a8fa0" />
+        <linearGradient id="fi-local-mtn-far" x1="14" y1="14" x2="14" y2="37">
+          <stop offset="0%" stopColor="#7a9aab" />
+          <stop offset="35%" stopColor="#5a7d8f" />
           <stop offset="100%" stopColor="#4a6b7c" />
         </linearGradient>
-        <linearGradient id="fi-local-mtn-near" x1="16" y1="20" x2="44" y2="38">
-          <stop offset="0%" stopColor="#4a6b7c" />
+        <linearGradient id="fi-local-mtn-near" x1="30" y1="18" x2="30" y2="37">
+          <stop offset="0%" stopColor="#5a7d8f" />
+          <stop offset="40%" stopColor="#3d5a68" />
           <stop offset="100%" stopColor="#2c4a3e" />
         </linearGradient>
       </defs>
-      <rect x="4" y="6" width="40" height="14" rx="2" fill="url(#fi-local-sky)" />
-      <circle cx="37" cy="12" r="3.5" fill="#f0c06a" />
-      <circle cx="37" cy="12" r="2.5" fill="#f7d98a" opacity="0.55" />
-      <path d="M4 37 14 22 24 30 34 19 44 37H4Z" fill="url(#fi-local-mtn-far)" />
-      <path d="M12 37 22 25 31 33 40 23 44 37H12Z" fill="url(#fi-local-mtn-near)" />
+      <rect x="4" y="6" width="40" height="36" rx="3" fill="url(#fi-local-atmosphere)" />
+      <circle cx="37" cy="11" r="3.2" fill="#f0c06a" />
+      <circle cx="37" cy="11" r="2.2" fill="#f7d98a" opacity="0.5" />
+      <path d="M4 37 15 21 25 29 35 18 44 37H4Z" fill="url(#fi-local-mtn-far)" opacity="0.92" />
+      <path d="M11 37 22 24 31 32 40 21 44 37H11Z" fill="url(#fi-local-mtn-near)" />
       <path
-        d="M14 22 15.5 19.5 17 22M31 19 32.5 16.5 34 19M38 23 39.5 20.5 41 23"
-        fill="#f4f8fb"
+        d="M15 21 16.5 18.5 18 21M33 18 34.5 15.5 36 18M39 22 40.5 19.5 42 22"
+        fill="#eef4f8"
+        opacity="0.95"
       />
-      <rect x="4" y="37" width="40" height="3" rx="0.5" fill="#6b8f62" />
-      <path d="M11 37V27l3-5 3 5v10H11Z" fill="#2c4a3e" />
-      <path d="M12.5 30l1.5-2.5 1.5 2.5M12.5 33l1.5-2.5 1.5 2.5M12.5 36l1.5-2.5 1.5 2.5" fill="#7a8b6f" />
-      <path d="M29 37V28l2.8-4.5 2.8 4.5v9H29Z" fill="#1e3329" />
-      <path d="M30.2 31.5l1.3-2 1.3 2M30.2 34l1.3-2 1.3 2M30.2 36.5l1.3-2 1.3 2" fill="#4a6b5c" />
       <path
-        d="M22 30c0-3.2 2.6-5.8 5.8-5.8 3.2 0 5.8 2.6 5.8 5.8 0 1.2-.4 2.3-1 3.2l-4.8 6.5-4.8-6.5c-.6-.9-1-2-1-3.2Z"
+        d="M4 20 Q14 17 24 19 Q34 16 44 20 L44 24 Q34 21 24 23 Q14 20 4 23 Z"
+        fill="#dce8f0"
+        opacity="0.35"
+      />
+      <path d="M10 37V27l3.2-5.2 3.2 5.2v10H10Z" fill="#2c4a3e" />
+      <path
+        d="M11.5 31c1.3-.9 2.6-.9 3.9 0M11.5 33.8c1.3-.9 2.6-.9 3.9 0M11.5 36.5c1.3-.9 2.6-.9 3.9 0"
+        fill="none"
+        stroke="#7a8b6f"
+        strokeWidth="0.75"
+        strokeLinecap="round"
+      />
+      <path d="M28.5 37V28.5l2.9-4.6 2.9 4.6V37H28.5Z" fill="#1e3329" />
+      <path
+        d="M29.8 32.2c1-.7 2-.7 3 0M29.8 34.7c1-.7 2-.7 3 0M29.8 37.2c1-.7 2-.7 3 0"
+        fill="none"
+        stroke="#4a6b5c"
+        strokeWidth="0.7"
+        strokeLinecap="round"
+      />
+      <path
+        d="M22.5 29.5c0-3.1 2.5-5.6 5.6-5.6s5.6 2.5 5.6 5.6c0 1.1-.3 2.2-.9 3.1l-4.7 6.3-4.7-6.3c-.6-.9-.9-2-.9-3.1Z"
         fill="#b87333"
       />
-      <circle cx="27.8" cy="30" r="2.3" fill="#f7f5f0" />
-      <circle cx="27.8" cy="30" r="0.9" fill="#b87333" />
+      <circle cx="28.1" cy="29.5" r="2.2" fill="#f7f5f0" />
+      <circle cx="28.1" cy="29.5" r="0.85" fill="#b87333" />
     </>
   ),
 };
