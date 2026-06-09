@@ -72,7 +72,7 @@ export function Hero({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display max-w-4xl text-4xl font-semibold leading-[1.1] text-white text-balance drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl"
+          className="hero-title font-display max-w-4xl text-4xl font-semibold leading-[1.1] text-balance sm:text-5xl md:text-6xl lg:text-7xl"
         >
           {title}
         </motion.h1>
@@ -107,10 +107,10 @@ export function Hero({
           className="hero-supporting-text mt-10 hidden items-center gap-6 text-sm font-semibold md:text-base md:flex"
         >
           <span>{site.address.region}</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-[#f2c090]" />
+          <span className="hero-accent h-1.5 w-1.5 rounded-full bg-current" />
           <span>Est. {site.founded}</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-[#f2c090]" />
-          <a href={`tel:${site.contact.phoneTel}`} className="hover:text-[#f2c090] transition-colors">
+          <span className="hero-accent h-1.5 w-1.5 rounded-full bg-current" />
+          <a href={`tel:${site.contact.phoneTel}`} className="hero-accent transition-colors hover:text-white">
             {site.contact.phone}
           </a>
         </motion.div>
