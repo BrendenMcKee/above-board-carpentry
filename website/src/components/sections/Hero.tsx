@@ -63,7 +63,7 @@ export function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-copper drop-shadow-sm"
+            className="hero-eyebrow mb-4 text-[11px] font-bold uppercase tracking-[0.08em] sm:text-xs sm:tracking-[0.12em] md:text-sm md:tracking-[0.18em]"
           >
             {eyebrow}
           </motion.p>
@@ -81,7 +81,7 @@ export function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="mt-6 max-w-2xl text-lg font-medium leading-relaxed text-white/90 drop-shadow-sm md:text-xl"
+            className="hero-supporting-text mt-6 max-w-2xl text-lg font-semibold leading-relaxed md:text-xl"
           >
             {subtitle}
           </motion.p>
@@ -104,13 +104,13 @@ export function Hero({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="mt-10 hidden items-center gap-6 text-sm font-medium text-white/85 drop-shadow-sm md:text-base md:flex"
+          className="hero-supporting-text mt-10 hidden items-center gap-6 text-sm font-semibold md:text-base md:flex"
         >
           <span>{site.address.region}</span>
-          <span className="h-1 w-1 rounded-full bg-copper" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#f2c090]" />
           <span>Est. {site.founded}</span>
-          <span className="h-1 w-1 rounded-full bg-copper" />
-          <a href={`tel:${site.contact.phoneTel}`} className="hover:text-white transition-colors">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#f2c090]" />
+          <a href={`tel:${site.contact.phoneTel}`} className="hover:text-[#f2c090] transition-colors">
             {site.contact.phone}
           </a>
         </motion.div>

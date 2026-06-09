@@ -110,12 +110,12 @@ export function Footer() {
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-x-5 gap-y-2">
+          <div className="-mx-1 flex flex-nowrap items-center gap-x-3 overflow-x-auto px-1 text-[11px] [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:gap-x-5 sm:text-xs [&::-webkit-scrollbar]:hidden">
             {legalLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-white/40 transition-colors hover:text-white/70"
+                className="shrink-0 whitespace-nowrap text-white/40 transition-colors hover:text-white/70"
               >
                 {link.label}
               </Link>
