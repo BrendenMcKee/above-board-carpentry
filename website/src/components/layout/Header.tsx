@@ -25,16 +25,14 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <Link href="/" className="group flex items-center gap-3" aria-label={site.name}>
-          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg shadow-md transition-transform group-hover:scale-105 md:h-11 md:w-11">
-            <Image
-              src="/icon.svg"
-              alt=""
-              width={44}
-              height={44}
-              className="h-full w-full"
-              priority
-            />
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt=""
+            width={329}
+            height={250}
+            className="h-12 w-auto shrink-0 object-contain transition-transform group-hover:scale-[1.02] md:h-14"
+            priority
+          />
           <div className="hidden sm:block">
             <p
               className={`font-display text-sm font-semibold leading-tight transition-colors md:text-base ${
